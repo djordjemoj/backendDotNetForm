@@ -31,7 +31,6 @@ export class Register extends Component {
         e.preventDefault();
 
         const { userData } = this.state;
-        alert(JSON.stringify(userData));    
         try {
             this.setState({ loading: true });
 
@@ -62,7 +61,7 @@ export class Register extends Component {
             <div>
                 <h1>Registracija</h1>
                 {registrationSuccess ? (
-                    <p>Uspesna registracija!.</p>
+                    <p>Uspesna registracija!</p>
                 ) : (
                     <form onSubmit={this.handleSubmit}>
                         <div className="form-group">
@@ -104,13 +103,14 @@ export class Register extends Component {
                         <div className="form-group">
                             <label htmlFor="promocode">Promo Code</label>
                             <input
-                                type="text"
-                                className="form-control"
-                                id="promocode"
-                                name="promocode"
-                                value={userData.promocode}
-                                onChange={this.handleInputChange}
-                                required
+                                    type="text"
+                                    className="form-control"
+                                    id="promocode"
+                                    name="promocode"
+                                    value={userData.promocode}
+                                    onChange={this.handleInputChange}
+                                    required
+                                    minLength={8 }
                             />
                         </div>
                         <button type="submit" className="btn btn-primary" disabled={loading}>
