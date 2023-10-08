@@ -30,7 +30,7 @@ namespace Project1.Controllers
             {
                 if (registerDTO is null) return BadRequest();
 
-                if (registerDTO.PromoCode.Length < 8) return BadRequest("Password must be at least 8 characters long");
+                if (registerDTO.PromoCode.Length <8) return BadRequest("Password must be at least 8 characters long");
 
                 string json = JsonSerializer.Serialize(registerDTO);
 

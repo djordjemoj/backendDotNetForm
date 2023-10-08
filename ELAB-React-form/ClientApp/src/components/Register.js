@@ -46,6 +46,7 @@ export class Register extends Component {
                 this.setState({ registrationSuccess: true });
             } else {
                 this.setState({ registrationSuccess: false });
+                alert("Registration not succesful")
             }
         } catch (error) {
             this.setState({ registrationSuccess: false });
