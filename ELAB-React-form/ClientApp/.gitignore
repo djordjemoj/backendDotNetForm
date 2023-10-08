@@ -4,8 +4,8 @@
 /node_modules
 
 #secrets
-/appsettings.json
-/appsettings.development.json
+appsettings.json
+appsettings.development.json
 
 # testing
 /coverage
